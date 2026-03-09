@@ -2,7 +2,14 @@ import java.util.Objects;
 
 public class Person {
     String name;
+    String surname;
+    Gender gender;
 
+    public Person(String name, String surname, Gender gender, int height) {
+        this.name = name;
+        this.surname = surname;
+        this.gender = gender;
+    }
     @Override
     public boolean equals(Object object) {
         if (object == null || getClass() != object.getClass()) return false;
