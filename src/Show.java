@@ -18,7 +18,7 @@ public class Show {
 
     public void printAllOfActors() {
         for (Actor actor : actors) {
-            System.out.println(actor.name + " " + actor.surname + " (" + actor.height + ")" );
+            System.out.println(actor.name + " " + actor.surname + " (" + actor.getHeight() + ")" );
         }
     }
 
@@ -59,9 +59,5 @@ public class Show {
         actors.set(idx, newActor);
         System.out.println("Актер " + oldActor.name + " " + oldActor.surname + " заменен на "
                 + newActor.name + " " + newActor.surname);
-                return;
-            }
-        }
-        System.out.println("Такого актера не найдено!");
     }
 }

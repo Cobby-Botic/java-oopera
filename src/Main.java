@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -7,14 +5,14 @@ public class Main {
         Actor actor1 = new Actor("Васян", "Нетбальский", Gender.MALE, 165);
         Actor actor2 = new Actor("Иван", "Васильев", Gender.MALE, 175);
         Actor actor3 = new Actor("Павел", "Шейнев", Gender.MALE, 180);
-        Actor actor4 = new Actor("Васян", "Нетбальский", Gender.MALE, 165);
+        Actor actor4 = new Actor("Васянчикс", "Нетбальский", Gender.MALE, 165);
         Actor actor5 = new Actor("Анжела", "Петрова", Gender.FEMALE, 165);
 
-        Director director1 = new Director("Сергей", "Васянкин", Gender.MALE, 170);
-        Director director2 = new Director("Ольга", "Ромашкина", Gender.FEMALE, 175);
+        Director director1 = new Director("Сергей", "Васянкин", Gender.MALE);
+        Director director2 = new Director("Ольга", "Ромашкина", Gender.FEMALE);
 
-        MusicAuthor musicAuthor = new MusicAuthor("Виталий", "Гостюхин", Gender.MALE, 161);
-        Choreographer choreographer = new Choreographer("Антон", "Серебряков", Gender.MALE, 180);
+        MusicAuthor musicAuthor = new MusicAuthor("Виталий", "Гостюхин", Gender.MALE);
+        Choreographer choreographer = new Choreographer("Антон", "Серебряков", Gender.MALE);
 
         Show romeoAndJuliet = new Show("Ромео и Джульетта", 120, director1);
         Ballet zolushka = new Ballet("Золушка", 120, director2, musicAuthor, "1 2 3 либретто тест",
