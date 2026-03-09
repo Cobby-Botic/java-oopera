@@ -34,11 +34,30 @@ public class Show {
     }
 
     public void changeActor(Actor actorToChange, Actor newActor) {
-        for (Actor actor : actors) {
-            if(actor.equals(actorToChange)) {
-                actors.remove(actor);
-                actors.add(newActor);
-                System.out.println("Актер " + actorToChange.name + " " + actorToChange.surname + " заменен на "
+        ArrayList<Integer> matchedIndexes = new ArrayList<>();
+
+        for (int i = 0; i < actors.size(); i++) {
+            Actor actor = actors.get(i);
+            if (actor.surname.equals(actorToChange.surname)) {
+                matchedIndexes.add(i);
+            }
+        }
+
+        if (matchedIndexes.isEmpty()) {
+            System.out.println("Такого актера не найдено!");
+            return;
+        }
+
+        if (matchedIndexes.size() > 1) {
+            System.out.println("В спектакле участвует несколько актеров с фамилией "
+                    + actorToChange.surname + ". Замена не производилась.");
+            return;
+        }
+
+        int idx = matchedIndexes.get(0);
+        Actor oldActor = actors.get(idx);
+        actors.set(idx, newActor);
+        System.out.println("Актер " + oldActor.name + " " + oldActor.surname + " заменен на "
                 + newActor.name + " " + newActor.surname);
                 return;
             }
