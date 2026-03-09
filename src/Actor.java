@@ -5,4 +5,17 @@ private int height;
         super(name, surname, gender);
         this.height = height;
     }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Actor actor = (Actor) o;
+        return height == actor.height;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), height);
+    }
 }
